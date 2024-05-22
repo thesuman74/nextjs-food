@@ -6,11 +6,11 @@ const PopularCategoriesCard = () => {
   return (
     <section className="grid grid-cols-5 items-center  gap-5  container max-w-7xl mx-auto">
       {cards.map((_, index) => (
-        <div className="max-w-sm mt-3 rounded-lg shadow-md mx-auto">
+        <div className="max-w-sm mt-3 rounded-lg shadow-md mx-auto group">
           <img
             src="/Images/burger.png"
             alt=""
-            className="w-full rounded-lg rounded-b-none"
+            className="w-full rounded-lg rounded-b-none transition-transform duration-200 group-hover:scale-105"
           />
           <div className="bg-gray-100 p-2 rounded-lg rounded-t-none">
             <span className="ml-5 font-medium">Burgers and Fast Food</span>

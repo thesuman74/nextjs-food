@@ -147,14 +147,14 @@ const HeroBanner = () => {
                   tenetur nihil quaerat suscipit, sunt dignissimos.
                 </p>
               </div>
-              <div className="ml-auto -mb-15 lg:-mb-56 lg:w-6/12">
+              <div className="ml-auto -mt-24 lg:-mb-56 lg:w-6/12">
                 <img
                   src="https://tailus.io/sources/blocks/food-delivery/preview/images/food.webp"
-                  className="relative"
+                  className="relative "
                   alt="food illustration"
                   loading="lazy"
-                  width="4500"
-                  height="3000"
+                  width="2000"
+                  height="800"
                 />
               </div>
             </div>
