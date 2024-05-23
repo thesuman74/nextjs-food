@@ -97,3 +97,43 @@
 ```
 
 4. Image refrence :![alt text](image-3.png)
+
+5. ### card with discounts and more
+
+```html
+<div
+  class="relative bg-white max-w-xs h-64 border shadow-sm rounded-xl m-4 overflow-hidden"
+>
+  <div>
+    <span
+      class="bg-orange-600 text-white px-5 mx-5 rounded-md text-sm absolute top-4"
+      >40% discount
+    </span>
+  </div>
+
+  <div>
+    <span
+      class="bg-orange-600 text-white px-2 mx-5 rounded-md text-sm absolute right-4 top-4"
+      >0
+    </span>
+  </div>
+  <img
+    src="https://picsum.photos/200"
+    alt=""
+    class="h-[180px] w-full object-cover "
+  />
+  <div class=" ml-2  flex justify-between text-slate-500 ">
+    <p class="text-sm  ">Burgers and Fastfood</p>
+    <p class="text-xs   mr-5">4* (500)</p>
+  </div>
+  <span class=" mx-2 text-xs text-slate-400 ">5 $</span>
+
+  <div class="text-xs text-slate-500 flex items-center mx-2 ">
+    <span class="">30 min </span>
+    <span class="mx-3">free </span>
+    <span class="mx-3">delivery</span>
+  </div>
+</div>
+```
+
+5. Image reference : ![alt text](image-4.png)

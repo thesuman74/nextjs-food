@@ -15,7 +15,7 @@ const FilterSection = () => {
                   type="radio"
                   name="sort"
                   id="relevance"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Relevance</span>
               </label>
@@ -25,7 +25,7 @@ const FilterSection = () => {
                   type="radio"
                   name="sort"
                   id="fastest-delivery"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Fastest Delivery</span>
               </label>
@@ -35,7 +35,7 @@ const FilterSection = () => {
                   type="radio"
                   name="sort"
                   id="distance"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Distance</span>
               </label>
@@ -50,7 +50,7 @@ const FilterSection = () => {
                   type="radio"
                   name="offers"
                   id="offer-relevance"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Relevance</span>
               </label>
@@ -60,7 +60,7 @@ const FilterSection = () => {
                   type="radio"
                   name="offers"
                   id="offer-fastest-delivery"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Fastest Delivery</span>
               </label>
@@ -70,7 +70,7 @@ const FilterSection = () => {
                   type="radio"
                   name="offers"
                   id="offer-distance"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Distance</span>
               </label>
@@ -87,7 +87,7 @@ const FilterSection = () => {
                   type="radio"
                   name="sort"
                   id="relevance"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Free Delivery</span>
               </label>
@@ -97,7 +97,7 @@ const FilterSection = () => {
                   type="radio"
                   name="sort"
                   id="fastest-delivery"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Accepts Vouchers</span>
               </label>
@@ -114,7 +114,7 @@ const FilterSection = () => {
                   type="radio"
                   name="sort"
                   id="relevance"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Free Delivery</span>
               </label>
@@ -124,7 +124,7 @@ const FilterSection = () => {
                   type="radio"
                   name="sort"
                   id="fastest-delivery"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Accepts Vouchers</span>
               </label>
@@ -134,7 +134,7 @@ const FilterSection = () => {
                   type="radio"
                   name="cuisine"
                   id="italian"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Italian</span>
               </label>
@@ -144,7 +144,7 @@ const FilterSection = () => {
                   type="radio"
                   name="cuisine"
                   id="chinese"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Chinese</span>
               </label>
@@ -154,7 +154,7 @@ const FilterSection = () => {
                   type="radio"
                   name="cuisine"
                   id="mexican"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Mexican</span>
               </label>
@@ -164,7 +164,7 @@ const FilterSection = () => {
                   type="radio"
                   name="cuisine"
                   id="indian"
-                  className="peer"
+                  className="peer border-yellow-500"
                 />
                 <span className="ml-3">Indian</span>
               </label>
