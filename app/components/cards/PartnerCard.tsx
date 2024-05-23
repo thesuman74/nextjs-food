@@ -2,13 +2,13 @@ import React from "react";
 
 const PartnerCard = () => {
   return (
-    <section className="container mx-auto grid max-w-6xl grid-cols-1 md:grid-cols-2 gap-3 mb-10">
+    <section className="container mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 gap-3 mb-10">
       <div className="group relative m-3 h-[300px] max-w-xl overflow-hidden rounded-xl bg-red-200">
         <div className="absolute left-16 rounded-b-xl bg-white px-3 py-2 z-10">
           <p className="text-sm font-medium">Earn more with lower Fee</p>
         </div>
         <img
-          src="https://picsum.photos/300"
+          src="/Images/Partner1.png"
           alt=""
           className="h-full w-full object-cover duration-200 group-hover:scale-110"
         />
@@ -31,7 +31,7 @@ const PartnerCard = () => {
           <p className="text-sm font-medium">Earn more with lower Fee</p>
         </div>
         <img
-          src="https://picsum.photos/300"
+          src="/Images/ride.png"
           alt=""
           className="h-full w-full object-cover duration-200 group-hover:scale-110"
         />
