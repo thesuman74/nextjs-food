@@ -9,21 +9,16 @@ import CousinesSection from "./Cousines/CousinesSection";
 
 const Page = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto h-full flex">
-      <div className="w-1/4 h-screen mt-20  left-0 p-0 m-0">
-        <FilterSection />
-      </div>
-      <div className="w-3/4  mr-10 ">
-        <Divider />
-        <Divider />
-        <DownloadSection />
-        <DiscountSection />
-        <CousinesSection />
-        <ExclusiveDeals />
-        <PopularCategories />
-        <PopularCategories />
-      </div>
-    </div>
+    <>
+      {/* <Divider />
+      <Divider /> */}
+      <DownloadSection />
+      <DiscountSection />
+      <CousinesSection />
+      <ExclusiveDeals />
+      <PopularCategories />
+      <PopularCategories />
+    </>
   );
 };
 

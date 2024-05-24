@@ -6,25 +6,25 @@ const DiscountSectionCard = () => {
       <div className="hide-scroll-bar flex overflow-x-scroll ">
         <div className=" flex flex-nowrap ">
           <div className="inline-block px-3">
-            <div className="h-52 w-96 max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
-              <img src="/Images/food2.png" alt="" className="w-full" />
+            <div className="h-auto w-96 max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
+              <img src="/Images/food2.png" alt="" className="w-full h-full" />
             </div>
           </div>
 
           <div className="inline-block px-3">
-            <div className="h-52 w-96 max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
-              <img src="/Images/food2.png" alt="" className="w-full" />
+            <div className="h-auto w-96 max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
+              <img src="/Images/food2.png" alt="" className="w-full h-full " />
             </div>
           </div>
 
           <div className="inline-block px-3">
-            <div className="h-52 w-96 max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
-              <img src="/Images/food2.png" alt="" className="w-full" />
+            <div className="h-auto w-96 max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
+              <img src="/Images/food2.png" alt="" className="w-full h-full" />
             </div>
           </div>
           <div className="inline-block px-3">
-            <div className="h-52 w-96 max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
-              <img src="/Images/food2.png" alt="" className="w-full" />
+            <div className="h-auto w-96 max-w-sm overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
+              <img src="/Images/food2.png" alt="" className="w-full h-full" />
             </div>
           </div>
         </div>

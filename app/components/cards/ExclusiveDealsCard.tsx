@@ -32,7 +32,7 @@ const ExclusiveDealsCard = () => {
           <img
             src={item.imageLink}
             alt="image"
-            className="transition-transform duration-200 group-hover:scale-110 object-cover"
+            className="transition-transform duration-200 group-hover:scale-110 object-cover w-full h-full"
           />
           <div className="absolute right-10 top-0 flex h-14 w-16 items-center justify-center rounded-b-xl bg-black">
             <p className="text-lg text-white">-40%</p>
