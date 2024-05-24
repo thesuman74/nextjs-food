@@ -1,0 +1,40 @@
+{
+  "deals": [
+    {
+      "id": "1",
+      "title": "Chef Burger London",
+      "subtitle": "Restaurant",
+      "imageLink": "/Images/food1.png"
+    },
+    {
+      "id": "2",
+      "title": "Pizza Palace",
+      "subtitle": "Restaurant",
+      "imageLink": "/Images/food2.png"
+    },
+    {
+      "id": "3",
+      "title": "Sushi World",
+      "subtitle": "Restaurant",
+      "imageLink": "/Images/food3.png"
+    },
+    {
+      "id": "4",
+      "title": "Taco Town",
+      "subtitle": "Restaurant",
+      "imageLink": "/Images/food4.png"
+    },
+    {
+      "id": "5",
+      "title": "Pasta Paradise",
+      "subtitle": "Restaurant",
+      "imageLink": "/Images/food5.png"
+    },
+    {
+      "id": "6",
+      "title": "Steakhouse Supreme",
+      "subtitle": "Restaurant",
+      "imageLink": "/Images/food6.png"
+    }
+  ]
+}

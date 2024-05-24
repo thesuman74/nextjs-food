@@ -1,5 +1,5 @@
-import FilterSection from "../components/filter/FilterSectionCard";
-import NavBar from "../components/ui/NavBar";
+import FilterSection from "@/components/filter/FilterSectionCard";
+import NavBar from "@/components/ui/NavBar";
 
 export default function FilterLayout({
   children,

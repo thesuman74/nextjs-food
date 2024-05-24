@@ -1,11 +1,9 @@
 import React from "react";
-import FilterSection from "../components/filter/FilterSectionCard";
-import PopularCategories from "../Home/PopularCategories/PopularCategories";
-import Divider from "../components/ui/divider";
-import ExclusiveDeals from "../Home/ExclusiveDeals/ExclusiveDeals";
-import DownloadSection from "../Home/DownloadSection/DownloadSection";
-import DiscountSection from "./DiscountSection/DiscountSection";
-import CousinesSection from "./Cousines/CousinesSection";
+import PopularCategories from "../../components/Home/PopularCategories";
+import DownloadSection from "../../components/Home/DownloadSection";
+import DiscountSection from "../../components/wishlist/DiscountSection";
+import CousinesSection from "../../components/wishlist/CousinesSection";
+import { ExclusiveDeals } from "../../components/Home/ExclusiveDeals";
 
 const Page = () => {
   return (
