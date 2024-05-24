@@ -137,3 +137,20 @@
 ```
 
 5. Image reference : ![alt text](image-4.png)
+
+6. ### basic cusines Cards
+
+```html
+<div class="m-4 w-28 overflow-hidden rounded-3xl">
+  <img
+    src="https://picsum.photos/100"
+    alt=""
+    class="h-auto w-full object-contain"
+  />
+  <div class="text-center">
+    <p>Italian</p>
+  </div>
+</div>
+```
+
+6. Image reference :![alt text](image-5.png)

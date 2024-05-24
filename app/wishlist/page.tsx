@@ -4,6 +4,8 @@ import PopularCategories from "../Home/PopularCategories/PopularCategories";
 import Divider from "../components/ui/divider";
 import ExclusiveDeals from "../Home/ExclusiveDeals/ExclusiveDeals";
 import DownloadSection from "../Home/DownloadSection/DownloadSection";
+import DiscountSection from "./DiscountSection/DiscountSection";
+import CousinesSection from "./Cousines/CousinesSection";
 
 const Page = () => {
   return (
@@ -15,10 +17,9 @@ const Page = () => {
         <Divider />
         <Divider />
         <DownloadSection />
-
+        <DiscountSection />
+        <CousinesSection />
         <ExclusiveDeals />
-        <PopularCategories />
-        <PopularCategories />
         <PopularCategories />
         <PopularCategories />
       </div>
