@@ -50,7 +50,7 @@ const ResturandIdDetail = ({ details }: { details: ResturantTypes }) => {
             <div className="flex flex-col items-center space-y-4 ">
               <div className="h-60 w-full rounded-lg bg-gray-100">
                 <img
-                  src="/Images/hotel.png"
+                  src={details.imageLink}
                   alt="Product Image"
                   className="h-full w-full rounded-xl object-cover"
                 />

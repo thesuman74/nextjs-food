@@ -29,12 +29,6 @@
       "title": "Pasta Paradise",
       "subtitle": "Restaurant",
       "imageLink": "/Images/food5.png"
-    },
-    {
-      "id": "6",
-      "title": "Steakhouse Supreme",
-      "subtitle": "Restaurant",
-      "imageLink": "/Images/food6.png"
     }
   ],
 
@@ -49,13 +43,13 @@
       "id": "2",
       "resturant_name": "Pizza Palace",
       "resturant_location": "location",
-      "imageLink": "/Images/food1.png"
+      "imageLink": "/Images/food2.png"
     },
     {
-      "id": "1",
+      "id": "3",
       "resturant_name": "Sushi World",
       "resturant_location": "location",
-      "imageLink": "/Images/food1.png"
+      "imageLink": "/Images/food3.png"
     }
   ]
 }
