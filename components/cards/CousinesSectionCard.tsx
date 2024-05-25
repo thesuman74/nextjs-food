@@ -1,10 +1,11 @@
 "use client";
 
 import { MoveLeft, MoveRight } from "lucide-react";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
 const CousinesSectionCard = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const autoScrollInterval = useRef<NodeJS.Timeout | null>(null);
 
   const scrollLeft = () => {
     if (scrollRef.current) {
@@ -24,6 +25,39 @@ const CousinesSectionCard = () => {
     }
   };
 
+  const startAutoScroll = () => {
+    stopAutoScroll(); // Clear any existing intervals
+    autoScrollInterval.current = setInterval(() => {
+      if (scrollRef.current) {
+        const { scrollWidth, clientWidth, scrollLeft } = scrollRef.current;
+        if (scrollLeft + clientWidth >= scrollWidth) {
+          scrollRef.current.scrollTo({
+            left: 0,
+            behavior: "smooth",
+          });
+        } else {
+          scrollRef.current.scrollBy({
+            left: 200,
+            behavior: "smooth",
+          });
+        }
+      }
+    }, 2000); // Adjust the interval duration as needed
+  };
+
+  const stopAutoScroll = () => {
+    if (autoScrollInterval.current) {
+      clearInterval(autoScrollInterval.current);
+      autoScrollInterval.current = null;
+    }
+  };
+
+  useEffect(() => {
+    startAutoScroll();
+
+    return () => stopAutoScroll(); // Cleanup on component unmount
+  }, []);
+
   const cuisines = [
     { id: "1", imagesrc: "/Images/food3.png", title: "Italian" },
     { id: "2", imagesrc: "/Images/food3.png", title: "Indian" },
@@ -38,7 +72,7 @@ const CousinesSectionCard = () => {
   ];
 
   return (
-    <div className="mt-4 flex flex-col ">
+    <div className="mt-4 flex flex-col">
       <div className="hide-scroll-bar flex overflow-x-scroll relative">
         <button
           onClick={scrollLeft}
@@ -49,11 +83,13 @@ const CousinesSectionCard = () => {
         <div
           ref={scrollRef}
           className="flex flex-nowrap space-x-6 text-lg overflow-x-scroll hide-scroll-bar"
+          onMouseEnter={stopAutoScroll}
+          onMouseLeave={startAutoScroll}
         >
-          <div className="flex flex-nowrap" ref={scrollRef}>
+          <div className="flex flex-nowrap">
             {cuisines.map((item) => (
               <div key={item.id} className="inline-block px-2">
-                <div className="m-4  w-36 overflow-hidden rounded-3xl  bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
+                <div className="m-4 w-36 overflow-hidden rounded-3xl bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl">
                   <img
                     src={item.imagesrc}
                     alt={item.title}
@@ -69,7 +105,7 @@ const CousinesSectionCard = () => {
         </div>
         <button
           onClick={scrollRight}
-          className="bg-gray-50 hover:bg-gray-100 p-2my-auto rounded-full"
+          className="bg-gray-100 hover:bg-gray-200 my-auto p-2 rounded-full"
         >
           <MoveRight color="#ffcb5c" />
         </button>

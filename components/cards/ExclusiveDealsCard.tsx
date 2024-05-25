@@ -26,7 +26,7 @@ const ExclusiveDealsCard = () => {
   return (
     <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-2 container max-w-7xl mx-auto">
       {cards.map((item) => (
-        <Link href={`/deals/${item.id}`} key={item.id}>
+        <Link href={`/resturants/${item.id}`} key={item.id}>
           <div className="relative max-w-sm overflow-hidden rounded-2xl shadow-lg group h-[250px]">
             <img
               src={item.imageLink}

@@ -36,5 +36,26 @@
       "subtitle": "Restaurant",
       "imageLink": "/Images/food6.png"
     }
+  ],
+
+  "resturants": [
+    {
+      "id": "1",
+      "resturant_name": "Chef Burger London",
+      "resturant_location": "location",
+      "imageLink": "/Images/food1.png"
+    },
+    {
+      "id": "2",
+      "resturant_name": "Pizza Palace",
+      "resturant_location": "location",
+      "imageLink": "/Images/food1.png"
+    },
+    {
+      "id": "1",
+      "resturant_name": "Sushi World",
+      "resturant_location": "location",
+      "imageLink": "/Images/food1.png"
+    }
   ]
 }
