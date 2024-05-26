@@ -1,17 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 export function DialogSection() {
   const [isOpen, setIsOpen] = useState(true); // Initialize to true to open dialog on page load
@@ -23,7 +13,7 @@ export function DialogSection() {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="max-w-[600px] h-[400px] p-2 ">
+      <DialogContent className="max-w-[700px] h-[500px] p-2 border-none">
         <div className="flex items-center justify-center h-full">
           <img
             src="/Images/food1.png" // Correct path to the image in the public directory

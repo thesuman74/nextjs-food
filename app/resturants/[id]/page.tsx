@@ -1,5 +1,6 @@
 import ResturandIdDetail from "@/components/resturant/ResturandIdDetail";
 import ResturantMenuScroll from "@/components/resturant/ResturantHorizontalScroll";
+import ResturantMenuSection from "@/components/resturant/ResturantMenuSection";
 
 import React from "react";
 
@@ -19,8 +20,8 @@ export default async function Details({ params }: any) {
   return (
     <>
       <ResturandIdDetail details={details} />
-
       <ResturantMenuScroll />
+      <ResturantMenuSection />
     </>
   );
 }

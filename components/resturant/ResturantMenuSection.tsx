@@ -8,7 +8,7 @@ const ResturantMenuSection = () => {
   return (
     <div>
       <div className="container mx-auto flex h-full w-auto flex-wrap ">
-        <div className="w-3/4  flex flex-wrap">
+        <div className="w-3/4 flex flex-wrap">
           <ComboDeals />
           <PopularDeals />
         </div>

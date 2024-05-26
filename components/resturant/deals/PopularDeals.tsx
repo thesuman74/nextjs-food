@@ -3,7 +3,7 @@ import ResturantCards from "../cards/ResturantCards";
 
 export default function PopularDeals() {
   return (
-    <div className="w-full mx-auto">
+    <div id="popular" className="w-full mx-auto">
       <h1 className=" text-3xl font-bold  mx-auto my-5 ">Popular Deals</h1>
 
       <ResturantCards />

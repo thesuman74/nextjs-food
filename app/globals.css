@@ -4,7 +4,8 @@
 
 @import "tailwindcss/utilities";
 
-  @layer base {
+
+  /* @layer base {
     :root {
       --background: 0 0% 100%;
       --foreground: 222.2 84% 4.9%;
@@ -75,8 +76,11 @@
     body {
       @apply bg-background text-foreground;
     }
-  }
+  } */
 
+  html {
+    scroll-behavior: smooth;
+  }
 
   .hide-scroll-bar {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -86,3 +90,65 @@
   .hide-scroll-bar::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
   }
+
+
+
+  /* radio button style starts here  */
+  .custom-radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .custom-radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .custom-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  .custom-radio-container:hover input ~ .custom-checkmark {
+    background-color: #ccc;
+  }
+
+  .custom-radio-container input:checked ~ .custom-checkmark {
+    background-color: #f08c35;
+  }
+
+  .custom-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .custom-radio-container input:checked ~ .custom-checkmark:after {
+    display: block;
+  }
+
+  .custom-radio-container .custom-checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+  /* ratio button sytle ends here  */
+ 
