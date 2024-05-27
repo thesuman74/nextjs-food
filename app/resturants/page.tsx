@@ -20,7 +20,7 @@ const page = () => {
 
       <ResturantMenuScroll />
 
-      {/* <ResturantMenuSection /> */}
+      <ResturantMenuSection />
     </div>
   );
 };

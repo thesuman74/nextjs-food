@@ -12,14 +12,14 @@ export function LocationDialog() {
     <Dialog>
       <DialogTrigger asChild>
         <div className="flex items-center hover:bg-pink-100/40 rounded-xl px-3">
-          <MapPin />
+          <MapPin size={40} />
           <Button variant="secondary" className="hover:scale-105 ">
             New Location
           </Button>
           <input
             type="text"
             placeholder="Your address (e.g. Tulegatan 1)"
-            className="text-orange-500  w-full rounded  p-2 bg-transparent "
+            className="text-Ptext  w-full rounded  p-2 bg-transparent "
             value="Swedenborgsgatan 16, 118 48 Stockholm"
           />
         </div>

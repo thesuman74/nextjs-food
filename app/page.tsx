@@ -12,7 +12,7 @@ import { ExclusiveDeals } from "../components/Home/ExclusiveDeals";
 export default function Home() {
   return (
     <div>
-      <DialogSection />
+      {/* <DialogSection /> */}
 
       <HeroBanner />
       <Divider />

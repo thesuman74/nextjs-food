@@ -73,7 +73,7 @@ const FilterSection = () => {
                 <span className="custom-checkmark"></span>
               </label>
 
-              <div className="flex space-x-2 my-3 border-pink-600 hover:bg-red-200 hover:rounded-lg">
+              <div className="flex space-x-2 my-3  border-pink-600 hover:bg-red-200 hover:rounded-lg">
                 <Award color="#dd2c6a" /> <p>Top Resturant</p>
               </div>
 

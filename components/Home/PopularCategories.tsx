@@ -1,5 +1,5 @@
 import PopularCategoriesCard from "@/components/cards/PopularCategoriesCard";
-import React from "react";
+import React, { Suspense } from "react";
 
 const PopularCategories = () => {
   return (

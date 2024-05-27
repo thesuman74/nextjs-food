@@ -3,7 +3,7 @@ import React from "react";
 export const DownloadSectionCard = () => {
   return (
     <div>
-      <div className="relative  my-5 mx-auto bg-slate-200 max-w-7xl h-[400px] rounded-xl grid grid-cols-2 overflow-x-visible overflow-y-hidden">
+      <div className="relative container  my-5 mx-auto bg-slate-200 max-w-7xl h-[400px] rounded-xl grid grid-cols-2 overflow-x-visible overflow-y-hidden">
         <div>
           <img
             src="/Images/friends.png"
