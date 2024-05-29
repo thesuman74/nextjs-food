@@ -53,7 +53,7 @@ const NavBar = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="transition hover:text-yellow-700">
+                  <a href="/cart" className="transition hover:text-yellow-700">
                     Cart
                   </a>
                 </li>

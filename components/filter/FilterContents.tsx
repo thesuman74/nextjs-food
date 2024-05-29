@@ -3,7 +3,7 @@ import React from "react";
 
 const FilterContents = () => {
   return (
-    <div className="  h-screen max-w-[300px] fixed top-30 space-y-5 rounded-lg border overflow-y-auto  hide-scroll-bar border-gray-100 bg-slate-100 p-5 z-20">
+    <div className="  h-screen max-w-[300px]   fixed top-30 space-y-5 rounded-lg border overflow-y-auto  hide-scroll-bar border-gray-100 bg-slate-100 p-5 z-20">
       <h2 className="text-center text-xl">Filter</h2>
 
       {/* Sort by section */}

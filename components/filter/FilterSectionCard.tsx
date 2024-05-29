@@ -4,7 +4,7 @@ import FilterContents from "./FilterContents";
 
 const FilterSection = () => {
   return (
-    <div className="hidden md:block">
+    <div className="hidden min-[900px]:block ">
       <FilterContents />
     </div>
   );

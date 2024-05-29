@@ -12,7 +12,7 @@ import FilterContents from "./FilterContents";
 
 const FilterSeek = () => {
   return (
-    <div className="block md:hidden">
+    <div className="block lg:hidden">
       <Sheet>
         <SheetTrigger className="h-screen ">
           {" "}

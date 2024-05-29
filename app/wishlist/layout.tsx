@@ -9,15 +9,15 @@ export default function FilterLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="max-w-screen-2xl mx-auto h-full flex ">
-      <div className="w-1/4 h-screen left-0 p-0 m-0  ">
-        <FilterSection />
-        {/* <FilterSeek /> */}
+    <main className="max-w-screen-2xl mx-auto h-full flex space-x-3">
+      <div className="min-[900px]:w-1/4 h-screen ">
+        <FilterSection  />
       </div>
-      <div className="w-3/4  mr-10 mt-0  ">
-        <SearchBar />
-
-        {children}
+      <div className=" w-full min-[900px]:w-3/4  mr-10 mt-0  ">
+        <div className="container ">
+          <SearchBar />
+          {children}
+        </div>
       </div>
     </main>
   );
