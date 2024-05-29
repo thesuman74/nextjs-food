@@ -48,7 +48,7 @@ const HeroBanner = () => {
                     </button>
                   </div>
                 </form>
-                <p className="mt-8 text-gray-700 lg:w-10/12">
+                <p className="mt-8 text-gray-700 lg:w-10/12 text-wrap ">
                   Sit amet consectetur adipisicing elit.{" "}
                   <a href="#" className="text-yellow-700">
                     connection
@@ -59,7 +59,7 @@ const HeroBanner = () => {
               <div className="ml-auto -mt-24 lg:-mb-56 lg:w-6/12">
                 <img
                   src="/Images/hamburger.png"
-                  className="relative hover:scale-105 transition-all    "
+                  className="relative hover:scale-105 transition-all md:w-96 lg:w-full mt-6 md:mt-12"
                   alt="food illustration"
                   loading="lazy"
                   width="2000"

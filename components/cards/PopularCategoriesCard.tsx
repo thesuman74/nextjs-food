@@ -24,7 +24,7 @@ const PopularCategoriesCard = async () => {
               className="w-full rounded-lg rounded-b-none transition-transform duration-200 group-hover:scale-105"
             />
             <div className="bg-gray-100 p-2 rounded-lg rounded-t-none">
-              <span className="ml-5 font-medium">{item.title}</span>
+              <p className="ml-5 font-medium text-wrap">{item.title}</p>
               <p className="text-Ptext text-sm ml-5">21 {item.subtitle}</p>
             </div>
           </div>

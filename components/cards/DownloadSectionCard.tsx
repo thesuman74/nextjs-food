@@ -3,27 +3,29 @@ import React from "react";
 export const DownloadSectionCard = () => {
   return (
     <div>
-      <div className="relative container  my-5 mx-auto bg-slate-200 max-w-7xl h-[400px] rounded-xl grid grid-cols-2 overflow-x-visible overflow-y-hidden">
-        <div>
+      <div className="relative container my-5 mx-auto bg-slate-200 max-w-7xl h-auto sm:h-[400px] rounded-xl grid grid-cols-1 sm:grid-cols-2 overflow-x-visible overflow-y-hidden">
+        <div className="flex justify-center items-center z-10">
           <img
             src="/Images/friends.png"
-            alt=" friend images"
-            className="transition-transform duration-200 hover:scale-105   "
+            alt="friend images"
+            className="transition-transform duration-200 hover:scale-105 w-full sm:w-auto"
           />
         </div>
-        <div className=" flex flex-col justify-center  space-y-3">
-          <span className="font-medium text-5xl  ">Among The Best </span>
-          <div className="bg-blue-950 w-full p-3 rounded-r-full text-white -ml-11 text-center">
-            <span className="underline text-orange-400 text-3xl font-semibold ">
+        <div className="flex flex-col justify-center p-4 sm:p-0 space-y-3">
+          <span className="font-medium text-3xl sm:text-5xl">
+            Among The Best
+          </span>
+          <div className="bg-blue-950 w-full p-3 rounded-r-full text-white sm:-ml-11 text-center">
+            <span className="underline text-orange-400 text-xl sm:text-3xl font-semibold">
               Personalized
             </span>
-            <span className=" font-bold text-3xl"> & Instant</span>
+            <span className="font-bold text-xl sm:text-3xl"> & Instant</span>
           </div>
-          <span>Download the app for faster ordering</span>
-          {/* <!-- button  component --> */}
-          <div className="">
+          <span className="text-center sm:text-left">
+            Download the app for faster ordering
+          </span>
+          <div className="flex justify-center sm:justify-start">
             <div className="flex space-x-4">
-              {/* <!-- https://developer.apple.com/app-store/marketing/guidelines/#section-badges --> */}
               <div className="mt-3 flex h-14 w-48 items-center justify-center rounded-xl bg-black text-white">
                 <div className="mr-3">
                   <svg viewBox="0 0 384 512" width="30">
@@ -40,8 +42,6 @@ export const DownloadSectionCard = () => {
                   </div>
                 </div>
               </div>
-
-              {/* <!-- https://play.google.com/intl/en_us/badges/ --> */}
               <div className="mt-3 flex h-14 w-48 items-center justify-center rounded-lg bg-black text-white">
                 <div className="mr-3">
                   <svg viewBox="30 336.7 120.9 129.2" width="30">

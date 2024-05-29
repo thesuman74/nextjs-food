@@ -3,8 +3,8 @@ import React, { Suspense } from "react";
 
 const PopularCategories = () => {
   return (
-    <div className="w-full mx-auto">
-      <h1 className="ml-20 text-3xl font-bold  mx-auto my-5 ">
+    <div className="w-7xl mx-auto ">
+      <h1 className="max-w-7xl   text-3xl font-bold  mx-auto my-5 ">
         Popular Categories
       </h1>
 

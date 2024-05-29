@@ -63,7 +63,7 @@ const AnimatedCounter = ({
           {({ countUpRef }) => (
             <span
               ref={countUpRef}
-              className="block text-5xl font-bold text-white"
+              className="block text-3xl  md:text-5xl font-bold text-white"
             >
               {/* The animated number will appear here */}
             </span>
