@@ -6,16 +6,6 @@ const LoginPage = () => {
       <h1 className="text-4xl font-medium">Login</h1>
       <p className="text-slate-500">Hi, Welcome back 👋</p>
 
-      <div className="my-5">
-        <button className="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
-          <img
-            src="https://www.svgrepo.com/show/355037/google.svg"
-            className="w-6 h-6"
-            alt="Google logo"
-          />
-          <span>Login with Google</span>
-        </button>
-      </div>
       <form action="" className="my-10">
         <div className="flex flex-col space-y-5">
           <label htmlFor="email">
@@ -99,6 +89,16 @@ const LoginPage = () => {
           </p>
         </div>
       </form>
+      <div className="my-5">
+        <button className="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
+          <img
+            src="https://www.svgrepo.com/show/355037/google.svg"
+            className="w-6 h-6"
+            alt="Google logo"
+          />
+          <span>Login with Google</span>
+        </button>
+      </div>
     </div>
   );
 };

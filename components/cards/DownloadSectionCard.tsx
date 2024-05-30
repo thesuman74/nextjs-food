@@ -2,17 +2,17 @@ import React from "react";
 
 export const DownloadSectionCard = () => {
   return (
-    <div className="relative container my-5 mx-auto bg-slate-200  h-auto sm:h-[400px] rounded-xl grid grid-cols-1 sm:grid-cols-2  overflow-y-hidden">
+    <div className="relative container my-5 mx-auto bg-slate-200  h-auto sm:h-[400px] rounded-xl grid grid-cols-1 sm:grid-cols-2  overflow-hidden">
       <div className="flex justify-center items-center z-10">
         <img
           src="/Images/friends.png"
           alt="friend images"
-          className="transition-transform duration-200 hover:scale-105 w-full sm:w-auto"
+          className=" transition-transform duration-200 hover:scale-105 w-full  sm:w-auto"
         />
       </div>
       <div className="flex flex-col justify-center p-4 sm:p-0 space-y-3">
         <span className="font-medium text-3xl sm:text-5xl">Among The Best</span>
-        <div className="bg-blue-950 w-full p-3 rounded-r-full text-white sm:-ml-11 text-center">
+        <div className="bg-blue-950 w-full p-1  rounded-r-full text-white sm:-ml-11 text-center">
           <span className="underline text-orange-400 text-xl sm:text-3xl font-semibold">
             Personalized
           </span>
@@ -21,9 +21,10 @@ export const DownloadSectionCard = () => {
         <span className="text-center sm:text-left">
           Download the app for faster ordering
         </span>
-        <div className="flex justify-center sm:justify-start">
-          <div className="flex space-x-4">
-            <div className="mt-3 flex h-14 w-48 items-center justify-center rounded-xl bg-black text-white">
+        {/* download button section  */}
+        <div className="flex sm:flex-row  justify-center sm:justify-start">
+          <div className="flex flex-wrap  space-x-2 justify-center ">
+            <div className="mt-3 flex  p-1 h-auto w-auto items-center justify-center rounded-xl bg-black text-white">
               <div className="mr-3">
                 <svg viewBox="0 0 384 512" width="30">
                   <path
@@ -39,7 +40,7 @@ export const DownloadSectionCard = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-3 flex h-14 w-48 items-center justify-center rounded-lg bg-black text-white">
+            <div className="mt-3 flex p-1 h-auto w-auto  items-center justify-center rounded-lg bg-black text-white">
               <div className="mr-3">
                 <svg viewBox="30 336.7 120.9 129.2" width="30">
                   <path
@@ -62,7 +63,7 @@ export const DownloadSectionCard = () => {
               </div>
               <div>
                 <div className="text-xs">GET IT ON</div>
-                <div className="-mt-1 font-sans text-xl font-semibold">
+                <div className="-mt-1 font-sans  text-xl font-semibold">
                   Google Play
                 </div>
               </div>

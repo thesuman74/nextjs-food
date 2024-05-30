@@ -1,3 +1,4 @@
+import FilterContents from "@/components/filter/FilterContents";
 import FilterSection from "@/components/filter/FilterSectionCard";
 import FilterSeek from "@/components/filter/FilterSeek";
 import NavBar from "@/components/ui/NavBar";
@@ -10,10 +11,12 @@ export default function FilterLayout({
 }) {
   return (
     <main className="max-w-screen-2xl mx-auto h-full flex space-x-3">
-      <div className="min-[900px]:w-1/4 h-screen ">
-        <FilterSection  />
+      <div className="hidden  lg:block w-1/4 h-screen ">
+        <div className="">
+          <FilterContents />
+        </div>
       </div>
-      <div className=" w-full min-[900px]:w-3/4  mr-10 mt-0  ">
+      <div className=" w-full lg:w-3/4 mr-10 mt-0  ">
         <div className="container ">
           <SearchBar />
           {children}
