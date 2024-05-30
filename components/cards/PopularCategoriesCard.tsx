@@ -1,4 +1,5 @@
 import { DealsTypes } from "@/Type";
+import { Heart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -16,8 +17,14 @@ const PopularCategoriesCard = async () => {
         <Link href={`/deals/${item.id}`} key={item.id}>
           <div
             key={item.id}
-            className="max-w-xs mt-3 rounded-lg shadow-md mx-auto group"
+            className="relative max-w-xs mt-3 rounded-lg shadow-md mx-auto group"
           >
+            {/* fav button  */}
+            <div className="w-7 h-7 z-10 flex items-center justify-center rounded-full bg-white top-2 right-5 absolute hover:fill group-hover:scale-105">
+              <Link key={item.id} href={"/#"}>
+                <Heart className="hover:fill-red-500" color="#e13370" />
+              </Link>
+            </div>
             <img
               src="/Images/food1.png"
               alt=""
