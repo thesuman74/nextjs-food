@@ -7,7 +7,7 @@ const NavBar = () => {
     <>
       <nav className="w-full  z-50 bg-yellow-50  ">
         <div className="container mx-auto px-2 md:px-12 lg:px-7">
-          <div className="flex items-center justify-between py-3 gap-6 md:py-4 md:gap-0">
+          <div className="flex items-center justify-between  gap-6 md:py-4 md:gap-0">
             {/* item 1 */}
             <div className="flex items-center space-x-4">
               <Link
@@ -51,6 +51,14 @@ const NavBar = () => {
                       className="transition hover:text-yellow-700"
                     >
                       Menus
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/wishlist"
+                      className="transition hover:text-yellow-700"
+                    >
+                      Wishlist
                     </a>
                   </li>
                   <li>
