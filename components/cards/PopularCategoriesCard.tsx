@@ -30,9 +30,7 @@ const PopularCategoriesCard = async () => {
             {/* Favorite button */}
             <div className="w-7 h-7 z-10 flex items-center justify-center rounded-full bg-white top-2 right-5 absolute hover:fill group-hover:scale-105">
               <button onClick={() => handleAddToCart(item.id)}>
-                <Link href={""}>
-                  <Heart className="hover:fill-red-500" color="#e13370" />
-                </Link>
+                <Heart className="hover:fill-red-500" color="#e13370" />
               </button>
             </div>
             <img
