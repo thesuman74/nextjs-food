@@ -25,25 +25,25 @@ const PopularCategoriesCard = async () => {
   return (
     <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 container max-w-7xl mx-auto p-4">
       {data.map((item: DealsTypes) => (
-        <Link href={`/deals/${item.id}`} key={item.id}>
-          <div className="relative max-w-xs mt-3 rounded-lg shadow-md mx-auto group">
-            {/* Favorite button */}
-            <div className="w-7 h-7 z-10 flex items-center justify-center rounded-full bg-white top-2 right-5 absolute hover:fill group-hover:scale-105">
-              <button onClick={() => handleAddToCart(item.id)}>
-                <Heart className="hover:fill-red-500" color="#e13370" />
-              </button>
+        <div className="relative max-w-xs mt-3 rounded-lg shadow-md mx-auto group">
+          {/* Favorite button */}
+          <div className="w-7 h-7 cursor-pointer z-10 flex items-center justify-center rounded-full bg-white top-2 right-5 absolute hover:fill group-hover:scale-105">
+            <div onClick={() => handleAddToCart(item.id)}>
+              <Heart className="hover:fill-red-500" color="#e13370" />
             </div>
+          </div>
+          <Link href={`/deals/${item.id}`} key={item.id}>
             <img
               src="/Images/food1.png"
               alt={item.title}
               className="w-full rounded-lg rounded-b-none transition-transform duration-200 group-hover:scale-105"
             />
-            <div className="bg-gray-100 p-2 rounded-lg rounded-t-none">
-              <p className="ml-5 font-medium text-wrap text-sm">{item.title}</p>
-              <p className="text-Ptext text-sm ml-5">{item.subtitle}</p>
-            </div>
+          </Link>
+          <div className="bg-gray-100 p-2 rounded-lg rounded-t-none">
+            <p className="ml-5 font-medium text-wrap text-sm">{item.title}</p>
+            <p className="text-Ptext text-sm ml-5">{item.subtitle}</p>
           </div>
-        </Link>
+        </div>
       ))}
     </section>
   );
