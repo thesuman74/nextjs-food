@@ -1,5 +1,6 @@
 import PopularCategoriesCard from "@/components/cards/PopularCategoriesCard";
 import React, { Suspense } from "react";
+import AddtoCart from "../addtocart/AddtoCart";
 
 const PopularCategories = () => {
   return (

@@ -1,9 +1,19 @@
+"use client";
+
+import { add } from "@/lib/store/features/cart/CartSlice";
+import { useAppDispatch } from "@/lib/store/hooks";
 import { DealsTypes } from "@/Type";
 import { Heart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
 const PopularCategoriesCard = async () => {
+  const dispatch = useAppDispatch();
+
+  const handleAddToCart = (productId: string) => {
+    console.log("Adding to cart", productId);
+    dispatch(add(productId));
+  };
   // fetching data from api
   const res = await fetch(`http://localhost:8000/deals`, {
     next: { revalidate: 10 },
@@ -21,9 +31,11 @@ const PopularCategoriesCard = async () => {
           >
             {/* fav button  */}
             <div className="w-7 h-7 z-10 flex items-center justify-center rounded-full bg-white top-2 right-5 absolute hover:fill group-hover:scale-105">
-              <Link key={item.id} href={"/#"}>
-                <Heart className="hover:fill-red-500" color="#e13370" />
-              </Link>
+              <button onClick={() => handleAddToCart(item.id)}>
+                <Link key={item.id} href={""}>
+                  <Heart className="hover:fill-red-500" color="#e13370" />
+                </Link>
+              </button>
             </div>
             <img
               src="/Images/food1.png"
