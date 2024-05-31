@@ -1,6 +1,7 @@
 import React from "react";
 import { LocationDialog } from "../Dialog/LocationDialog";
 import Link from "next/link";
+import AddtoCartButton from "./AddtoCartButton";
 
 const NavBar = () => {
   return (
@@ -66,7 +67,7 @@ const NavBar = () => {
                       href="/cart"
                       className="transition hover:text-yellow-700"
                     >
-                      Cart
+                      <AddtoCartButton />
                     </a>
                   </li>
                 </ul>
