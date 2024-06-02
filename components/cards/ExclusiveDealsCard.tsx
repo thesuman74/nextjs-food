@@ -29,7 +29,7 @@ const ExclusiveDealsCard = async () => {
     next: { revalidate: 10 },
   });
   const data = await res.json();
-  console.log("this is fetched from resturant ", data);
+  // console.log("this is fetched from resturant ", data);
 
   // { item }: { item: ResturantTypes }
   return (

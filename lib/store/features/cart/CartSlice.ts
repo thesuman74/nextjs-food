@@ -1,26 +1,31 @@
+// lib/store/features/cart/CartSlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-// Define a type for the slice state
-export interface CartState {
-  items: string[];
+interface CartItem {
+  imageLink: string | undefined;
+  id: string;
+  title: string;
+  subtitle: string;
+  // Add other fields as needed
 }
 
-// Define the initial state using that type
+interface CartState {
+  items: CartItem[];
+}
+
 const initialState: CartState = {
   items: [],
 };
 
-export const cartSlice = createSlice({
+const cartSlice = createSlice({
   name: "cart",
-  // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
-    add: (state, action) => {
-      //data passed to add function can be accessed from action.payload
+    add: (state, action: PayloadAction<CartItem>) => {
       state.items.push(action.payload);
     },
-    remove: (state, action) => {
-      state.items = state.items.filter((item) => item !== action.payload);
+    remove: (state, action: PayloadAction<string>) => {
+      state.items = state.items.filter((item) => item.id !== action.payload);
     },
   },
 });

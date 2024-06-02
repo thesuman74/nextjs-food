@@ -8,7 +8,7 @@ const PopularCategoriesCard = async () => {
     next: { revalidate: 10 },
   });
   const data = await res.json();
-  console.log("this is fetched from resturant ", data);
+  // console.log("this is fetched from resturant ", data);
 
   return (
     <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 container max-w-7xl mx-auto p-4">

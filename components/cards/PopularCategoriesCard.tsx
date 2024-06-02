@@ -9,7 +9,9 @@ import React, { useEffect, useState } from "react";
 
 const PopularCategoriesCard = () => {
   const dispatch = useAppDispatch();
-  const items = useAppSelector((state) => state.cart.items);
+  const items = useAppSelector((state) =>
+    state.cart.items.map((item) => item.id)
+  );
   const [data, setData] = useState<DealsTypes[]>([]);
 
   useEffect(() => {
@@ -29,13 +31,14 @@ const PopularCategoriesCard = () => {
     fetchData();
   }, []);
 
-  const handleToggleCart = (productId: string) => {
-    if (items.includes(productId)) {
-      console.log("Removing from cart", productId);
-      dispatch(remove(productId));
+  const handleToggleCart = (item: DealsTypes) => {
+    const itemInCart = items.includes(item.id);
+    if (itemInCart) {
+      console.log("Removing from cart", item.id);
+      dispatch(remove(item.id));
     } else {
-      console.log("Adding to cart", productId);
-      dispatch(add(productId));
+      console.log("Adding to cart", item.id);
+      dispatch(add(item));
     }
   };
 
@@ -51,7 +54,7 @@ const PopularCategoriesCard = () => {
           >
             {/* Favorite button */}
             <div className="w-7 h-7 cursor-pointer z-10 flex items-center justify-center rounded-full bg-white top-2 right-5 absolute hover:fill group-hover:scale-105">
-              <button onClick={() => handleToggleCart(item.id)}>
+              <button onClick={() => handleToggleCart(item)}>
                 <Heart
                   className={`hover:fill-red-500 ${
                     isInCart ? "fill-red-500" : ""

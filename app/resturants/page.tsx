@@ -1,3 +1,4 @@
+import PopularCategories from "@/components/Home/PopularCategories";
 import ResturantDetailCard from "@/components/resturant/cards/ResturantDetailCard";
 import ResturandIdDetail from "@/components/resturant/ResturandIdDetail";
 import ResturantMenuScroll from "@/components/resturant/ResturantHorizontalScroll";
