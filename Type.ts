@@ -11,3 +11,11 @@ export interface DealsTypes {
   subtitle: string;
   imageLink: string;
 }
+
+export interface ResturantProductTypes {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  imageLink: string;
+}

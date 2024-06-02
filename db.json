@@ -51,5 +51,49 @@
       "resturant_location": "location",
       "imageLink": "/Images/food3.png"
     }
+  ],
+  "resturantProducts": [
+    {
+      "id": "1",
+      "title": "Chef Burger London",
+      "description": "Restaurant",
+      "price": 100,
+      "imageLink": "/Images/food1.png"
+    },
+    {
+      "id": "2",
+      "title": "Pizza Palace",
+      "description": "Restaurant",
+      "price": 200,
+      "imageLink": "/Images/food2.png"
+    },
+    {
+      "id": "3",
+      "title": "Sushi World",
+      "description": "Restaurant",
+      "price": 300,
+      "imageLink": "/Images/food3.png"
+    },
+    {
+      "id": "4",
+      "title": "Taco Town",
+      "description": "Restaurant",
+      "price": 400,
+      "imageLink": "/Images/food1.png"
+    },
+    {
+      "id": "5",
+      "title": "Pasta Paradise",
+      "description": "Restaurant",
+      "price": 500,
+      "imageLink": "/Images/food2.png"
+    },
+    {
+      "id": "6",
+      "title": "Your Item",
+      "description": "Restaurant",
+      "price": 600,
+      "imageLink": "/Images/food3.png"
+    }
   ]
 }
