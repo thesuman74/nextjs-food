@@ -7,7 +7,7 @@ import React from "react";
 
 const AddtoCartButton = () => {
   const items = useAppSelector((state) => state.products.items);
-  console.log("This is add to cart data ", items);
+  // console.log("This is add to cart data ", items);
 
   return (
     <div className="relative">

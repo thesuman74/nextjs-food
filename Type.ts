@@ -17,5 +17,6 @@ export interface ResturantProductTypes {
   title: string;
   description: string;
   price: number;
+  quantity: number;
   imageLink: string;
 }

@@ -58,6 +58,7 @@
       "title": "Chef Burger London",
       "description": "Restaurant",
       "price": 100,
+      "quantity": 1,
       "imageLink": "/Images/food1.png"
     },
     {
@@ -65,6 +66,7 @@
       "title": "Pizza Palace",
       "description": "Restaurant",
       "price": 200,
+      "quantity": 1,
       "imageLink": "/Images/food2.png"
     },
     {
@@ -72,6 +74,7 @@
       "title": "Sushi World",
       "description": "Restaurant",
       "price": 300,
+      "quantity": 1,
       "imageLink": "/Images/food3.png"
     },
     {
@@ -79,6 +82,7 @@
       "title": "Taco Town",
       "description": "Restaurant",
       "price": 400,
+      "quantity": 1,
       "imageLink": "/Images/food1.png"
     },
     {
@@ -86,6 +90,7 @@
       "title": "Pasta Paradise",
       "description": "Restaurant",
       "price": 500,
+      "quantity": 1,
       "imageLink": "/Images/food2.png"
     },
     {
@@ -93,6 +98,7 @@
       "title": "Your Item",
       "description": "Restaurant",
       "price": 600,
+      "quantity": 1,
       "imageLink": "/Images/food3.png"
     }
   ]

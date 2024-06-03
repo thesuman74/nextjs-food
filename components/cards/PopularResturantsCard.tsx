@@ -1,23 +1,29 @@
+"use client";
+
 import { DealsTypes } from "@/Type";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const PopularCategoriesCard = async () => {
-  // fetching data from api
-  const res = await fetch(`http://localhost:8000/deals`, {
-    next: { revalidate: 10 },
-  });
-  const data = await res.json();
-  // console.log("this is fetched from resturant ", data);
+const PopularCategoriesCard = () => {
+  const [data, setData] = useState<DealsTypes[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(`http://localhost:8000/deals`, {
+        next: { revalidate: 10 },
+      });
+      const result = await res.json();
+      setData(result);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 container max-w-7xl mx-auto p-4">
       {data.map((item: DealsTypes) => (
         <Link href={`/deals/${item.id}`} key={item.id}>
-          <div
-            key={item.id}
-            className="max-w-xs mt-3 rounded-lg shadow-md mx-auto group"
-          >
+          <div className="max-w-xs mt-3 rounded-lg shadow-md mx-auto group">
             <img
               src="/Images/food1.png"
               alt=""
