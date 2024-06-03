@@ -28,6 +28,9 @@ const HeroBanner = () => {
                       placeholder="Your favorite food"
                       className="w-full p-4 rounded-full"
                       type="text"
+                      name="favorite food"
+                      id="favorite food"
+                      autoComplete="off"
                     />
                     <button
                       type="button"

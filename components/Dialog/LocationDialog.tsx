@@ -17,6 +17,8 @@ export function LocationDialog() {
             New Location
           </Button>
           <input
+            name="address"
+            id="address"
             type="text"
             placeholder="Your address (e.g. Tulegatan 1)"
             className="text-Ptext  w-full rounded  p-2 bg-transparent "
@@ -55,6 +57,8 @@ export function LocationDialog() {
               seamless order tracking, and personalized recommendations.
             </p>
             <input
+              name="address"
+              id="address"
               type="text"
               placeholder="Your address (e.g. Tulegatan 1)"
               className="mt-4 w-full rounded border p-2"

@@ -73,6 +73,8 @@ const AddtoCart = () => {
                         <input
                           className="h-8 w-8 border bg-white text-center text-xs outline-none"
                           type="number"
+                          name="quantity"
+                          id="quantity"
                           value={quantity} // Use constant quantity
                           min="1"
                           readOnly

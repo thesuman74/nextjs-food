@@ -14,6 +14,7 @@ const FilterContents = () => {
             <label className="custom-radio-container">
               Relevance
               <input
+              
                 type="radio"
                 name="sort"
                 id="relevance"

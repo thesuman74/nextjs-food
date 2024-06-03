@@ -28,6 +28,7 @@ const SearchBar = () => {
             type="text"
             id="search"
             placeholder="Search something.."
+            name="search"
           />
 
           {/* filter icon  */}

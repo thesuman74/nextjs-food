@@ -45,6 +45,8 @@ const ResturantMenuScroll = () => {
     <div className="bg-white shadow-inner w-full sticky top-16 z-50 mx-auto flex items-center space-x-6 p-3">
       <div>
         <input
+          name="search"
+          id="search"
           type="text"
           placeholder="Search items here"
           className="rounded-lg m-2 border"
@@ -68,7 +70,10 @@ const ResturantMenuScroll = () => {
           Combo
         </Link>
 
-        <Link href="#popular" className="hover:underline-offset-4 px-5 cursor-pointer hover:text-blue-300 hover:shadow-xl">
+        <Link
+          href="#popular"
+          className="hover:underline-offset-4 px-5 cursor-pointer hover:text-blue-300 hover:shadow-xl"
+        >
           Popular
         </Link>
         <div className="px-5">Popular</div>
