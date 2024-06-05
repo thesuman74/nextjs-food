@@ -14,7 +14,7 @@ const AddtoCart = () => {
   if (!items || items.length === 0) {
     return (
       <div className="h-screen flex flex-col justify-center items-center">
-        <h1 className="text-bold text-5xl">Add items into cart</h1>
+        <h1 className="text-bold text-5xl">Favourite items </h1>
         <PopularCategories />
       </div>
     );
