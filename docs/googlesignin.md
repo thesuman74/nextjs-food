@@ -81,13 +81,6 @@ export const {
 
 path : **.env**
 
-```code
-GOOGLE_CLIENT_ID =
-GOOGLE_CLIENT_SEC
-
-AUTH_SEC = genreate form open ssl(type this in terminal => openssl rand -hex 32)
-```
-
 ### 4. Create a new file name route.ts in **app\api\auth\[...nextauth]\route.ts**
 
 ```typescript
