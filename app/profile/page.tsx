@@ -7,7 +7,7 @@ import Logout from "@/components/Logout";
 const page = async () => {
   const session = await auth();
 
-  if (!session?.user) redirect("/test");
+  if (!session?.user) redirect("/login");
 
   const userName = session?.user?.name || "User";
   const userImage = session?.user?.image || "/default-image.png"; // Provide a default image path
