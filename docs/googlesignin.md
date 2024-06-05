@@ -82,8 +82,8 @@ export const {
 path : **.env**
 
 ```code
-GOOGLE_CLIENT_ID = xxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET = GxxxxxxxxxxxxxxLG9xxxxQHct
+GOOGLE_CLIENT_ID =
+GOOGLE_CLIENT_SECRET =
 
 AUTH_SECRET = genreate form open ssl(type this in terminal => openssl rand -hex 32)
 ```
