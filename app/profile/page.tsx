@@ -4,13 +4,15 @@ import { redirect } from "next/navigation";
 import Image from "next/image";
 import Logout from "@/components/Logout";
 
-const page = async () => {
+const Page = async () => {
   const session = await auth();
 
-  if (!session?.user) redirect("/login");
+  if (!session?.user) {
+    redirect("/login");
+  }
 
   const userName = session?.user?.name || "User";
-  const userImage = session?.user?.image || "/default-image.png"; // Provide a default image path
+  const userImage = session?.user?.image || "/Images/burger.png"; // Provide a default image path
 
   return (
     <div className="flex flex-col items-center m-4 h-screen space-y-5">
@@ -24,10 +26,10 @@ const page = async () => {
         className="rounded-full"
         priority // This attribute helps load the image faster, especially if it's above the fold
       />
-      <h2 className="">{userName}</h2>
+      <h2 className="">Hello, {userName}</h2>
       <Logout />
     </div>
   );
 };
 
-export default page;
+export default Page;

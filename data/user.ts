@@ -4,7 +4,7 @@ const users = [
     password: "password",
   },
   {
-    email: "all@gamil.com",
+    email: "all@gmail.com",
     password: "all",
   },
   {
@@ -13,7 +13,7 @@ const users = [
   },
 ];
 
-export const getUserByEmail = (username: string) => {
-  const found = users.find((user) => user.email === username);
+export const getUserByEmail = (email: unknown) => {
+  const found = users.find((user) => user.email === email);
   return found;
 };
