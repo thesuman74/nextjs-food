@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { doSocialLogin } from "@/app/actions/authAction";
+import { doCredentialLogin, doSocialLogin } from "@/app/actions/authAction";
 
 export default function LoginPage() {
   const [errMessage, setErrorMessage] = useState("");
@@ -11,20 +11,21 @@ export default function LoginPage() {
 
   const handleSubmit = async (formData: FormData) => {
     try {
-      const result = await signIn("credentials", {
-        username: formData.get("username"), // Ensure this matches the field name
-        password: formData.get("password"),
-      });
+      const response = await doCredentialLogin(formData);
 
-      if (!result?.ok) {
-        throw new Error(result?.error as string);
+      if (response) {
+        console.log("docredential login response", response);
       }
 
-      if (result?.ok) {
+      if (!!response.error) {
+        console.error(response.error);
+        setErrorMessage(response.error.message);
+      } else {
         router.push("/profile");
       }
-    } catch (error: any) {
-      setErrorMessage(error.message);
+    } catch (e) {
+      console.error(e);
+      setErrorMessage("Check your Credentials");
     }
   };
 
