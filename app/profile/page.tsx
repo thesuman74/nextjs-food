@@ -6,12 +6,13 @@ import Logout from "@/components/Logout";
 
 const Page = async () => {
   const session = await auth();
+  console.log("This is session data ", session);
 
   if (!session?.user) {
     redirect("/login");
   }
 
-  const userName = session?.user?.name || "User";
+  const userName = session?.user?.name || "No User name";
   const userImage = session?.user?.image || "/Images/burger.png"; // Provide a default image path
 
   return (

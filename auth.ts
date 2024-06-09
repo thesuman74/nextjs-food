@@ -1,7 +1,8 @@
-import NextAuth from "next-auth";
+import NextAuth, { User } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { getUserByEmail } from "./data/user";
+import { LoginAction } from "./app/actions/CredentailActions";
 
 export const {
   handlers: { GET, POST },
@@ -9,6 +10,9 @@ export const {
   signIn,
   signOut,
 } = NextAuth({
+  session: {
+    strategy: "jwt",
+  },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -22,6 +26,7 @@ export const {
         },
       },
     }),
+
     CredentialsProvider({
       credentials: {
         email: {},
@@ -31,23 +36,38 @@ export const {
         if (credentials === null) return null;
 
         try {
-          const user = getUserByEmail(credentials?.email);
-          console.log(user);
-          if (user) {
-            const isMatch = user?.password === credentials.password;
+          const userdetail = await LoginAction(
+            credentials.email as string,
+            credentials.password as string
+          );
+          const session = await userdetail;
 
-            if (isMatch) {
-              return user;
-            } else {
-              throw new Error("Email or Password is not correct");
-            }
-          } else {
-            throw new Error("User not found");
+          if (userdetail) {
+            console.log(
+              "this is user Detail data from auth.ts",
+              userdetail.user_type
+            );
+            return userdetail;
           }
         } catch (error) {
+          console.error("Error during login:", error);
           throw new Error(String(error));
         }
       },
     }),
   ],
+  callbacks: {
+    jwt: async ({ token, user }) => {
+      if (user) {
+        token.user = user; // Storing user data in the token
+      }
+      return token;
+    },
+    session: async ({ session, token }) => {
+      if (token?.user) {
+        // session.user = token.user as User; // Storing user data in the session
+      }
+      return session;
+    },
+  },
 });

@@ -18,7 +18,7 @@ export const LoginAction = async (username: string, password: string) => {
     );
 
     if (!loginResponse.ok) {
-      throw new Error("Failed to submit form");
+      throw new Error("Check login Credentails");
     }
 
     const loginData = await loginResponse.json();
@@ -38,7 +38,9 @@ export const LoginAction = async (username: string, password: string) => {
     }
 
     const userDetails = await userDetailsResponse.json();
-    return { ...userDetails, token: loginData.key };
+    console.log("this is userdetail from credentailActions", userDetails.data);
+
+    return { ...userDetails.data, token: loginData.key };
   } catch (error) {
     console.error("Error while logging in:", error);
     throw error;
