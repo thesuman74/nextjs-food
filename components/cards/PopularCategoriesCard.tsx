@@ -67,7 +67,7 @@ const PopularCategoriesCard = () => {
               <img
                 src="/Images/food1.png"
                 alt={item.title}
-                className="w-full rounded-lg rounded-b-none transition-transform duration-200 group-hover:scale-105"
+                className="w-full rounded-lg rounded-b-none transition-transform duration-200 group-hover:scale-105 object-cover"
               />
             </Link>
             <div className="bg-gray-100 p-2 rounded-lg rounded-t-none">
