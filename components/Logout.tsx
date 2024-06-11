@@ -5,10 +5,7 @@ const Logout = () => {
   return (
     <div>
       <form action={doLogout}>
-        <button
-          type="submit"
-          className="bg-red-400 my-2 text-white p-1 rounded-lg"
-        >
+        <button type="submit" className="text-yellow-900 font-semibold text-sm">
           Log Out
         </button>
       </form>
