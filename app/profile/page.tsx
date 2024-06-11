@@ -12,8 +12,8 @@ const Page = async () => {
     redirect("/login");
   }
 
-  const userName = session?.user?.name || "No User name";
-  const userImage = session?.user?.image || "/Images/burger.png"; // Provide a default image path
+  const userName = session?.user?.email || "No User name";
+  const userImage = session?.user?.user_profile  || "/Images/burger.png"; // Provide a default image path
 
   return (
     <div className="flex flex-col items-center m-4 h-screen space-y-5">

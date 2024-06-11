@@ -7,7 +7,6 @@ import Logout from "../Logout";
 
 const NavBar = async () => {
   const session = await auth();
-  console.log("This is session data ", session);
 
   return (
     <>

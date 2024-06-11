@@ -34,7 +34,6 @@ export const {
       },
       async authorize(credentials) {
         if (credentials === null) return null;
-
         try {
           const userdetail = await LoginAction(
             credentials.email as string,
@@ -64,8 +63,10 @@ export const {
       return token;
     },
     session: async ({ session, token }) => {
+      console.log("session", session);
       if (token?.user) {
-        // session.user = token.user as User; // Storing user data in the session
+        session.user = { ...token.user } as any; // Sync user data into session
+        console.log("session", session.user);
       }
       return session;
     },

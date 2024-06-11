@@ -101,5 +101,29 @@
       "quantity": 1,
       "imageLink": "/Images/food3.png"
     }
+  ],
+  "todos": [
+    {
+      "checked": true,
+      "title": "test",
+      "description": "test",
+      "id": 1
+    },
+    {
+      "checked": false,
+      "title": "Complete project",
+      "description": "Finish writing code for the new project feature.",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1"
+    },
+    {
+      "id": 2,
+      "name": "Product 2"
+    }
   ]
 }
