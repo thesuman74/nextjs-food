@@ -21,14 +21,14 @@ const Page = async () => {
       <Image
         src={userImage}
         alt={userName}
-        width={100}
-        height={100}
+        width={2000}
+        height={2000}
         quality={100}
-        className="rounded-full"
+        className="rounded-full w-40 h-40 "
         priority // This attribute helps load the image faster, especially if it's above the fold
       />
       <h2 className="">Hello, {userName}</h2>
-      <Logout />
+      {/* <Logout /> */}
     </div>
   );
 };
