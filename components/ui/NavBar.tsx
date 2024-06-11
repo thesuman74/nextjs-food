@@ -2,9 +2,13 @@ import React from "react";
 import { LocationDialog } from "../Dialog/LocationDialog";
 import Link from "next/link";
 import AddtoCartButton from "./AddtoCartButton";
-import AddToCartSeek from "../addtocart/AddtoCartSeek";
+import { auth } from "@/auth";
+import Logout from "../Logout";
 
-const NavBar = () => {
+const NavBar = async () => {
+  const session = await auth();
+  console.log("This is session data ", session);
+
   return (
     <>
       <nav className="w-full  z-50 bg-yellow-50  ">
@@ -81,21 +85,45 @@ const NavBar = () => {
                   title="Start buying"
                   className="py-3 px-6 text-center rounded-full transition active:bg-yellow-200 focus:bg-yellow-100"
                 >
-                  <span className="text-yellow-800 font-semibold text-sm">
+                  <div>
+                    {session?.user ? (
+                      // Render this if there is a user in the session
+                      <span className="text-yellow-800 font-semibold text-sm hidden">
+                        logged in
+                      </span>
+                    ) : (
+                      // Render this if there is no user in the session
+                      <span className="text-yellow-800 font-semibold text-sm ">
+                        Sign up
+                      </span>
+                    )}
+                  </div>
+
+                  {/* <span className="text-yellow-800 font-semibold text-sm">
                     Sign up
-                  </span>
+                  </span> */}
                 </button>
-                <button
-                  type="button"
-                  title="Start buying"
-                  className="py-3 px-6 text-center rounded-full transition bg-yellow-300 hover:bg-yellow-100 active:bg-yellow-400 focus:bg-yellow-300"
-                >
-                  <Link href={"/login"}>
+
+                <div className="py-3 px-6 text-center rounded-full transition bg-yellow-300 hover:bg-yellow-100 active:bg-yellow-400 focus:bg-yellow-300">
+                  {session?.user ? (
+                    // Render this if there is a user in the session
+                    <div>
+                      <Logout />
+                    </div>
+                  ) : (
+                    // Render this if there is no user in the session
+                    <Link href={"/login"}>
+                      <span className="text-yellow-900 font-semibold text-sm">
+                        Login
+                      </span>
+                    </Link>
+                  )}
+                </div>
+                {/* <Link href={"/login"}>
                     <span className="text-yellow-900 font-semibold text-sm">
                       Login
                     </span>
-                  </Link>
-                </button>
+                  </Link> */}
               </div>
             </div>
           </div>
