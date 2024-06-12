@@ -12,8 +12,13 @@ const Page = async () => {
     redirect("/login");
   }
 
-  const userName = session?.user?.email || "No User name";
-  const userImage = session?.user?.user_profile  || "/Images/burger.png"; // Provide a default image path
+  const apiImage = session?.user?.image;
+  const apiUsername = session?.user?.username;
+  const userdetail = JSON.stringify(session);
+
+  const userName = session?.user.name || apiUsername || "No User name";
+  const useremail = session?.user?.email || "No User name";
+  const userImage = session?.user.image || apiImage || "/Images/burger.png"; // Provide a default image path
 
   return (
     <div className="flex flex-col items-center m-4 h-screen space-y-5">
@@ -28,7 +33,14 @@ const Page = async () => {
         priority // This attribute helps load the image faster, especially if it's above the fold
       />
       <h2 className="">Hello, {userName}</h2>
+      <h2 className="">Your email is : {useremail}</h2>
       {/* <Logout /> */}
+      <div className="border border-pink-600">
+        <p className="text-bold text-2xl text-center">
+          This data is present in session
+        </p>
+        <p className="max-w-sm w-80 overflow-x-hidden">{userdetail}</p>
+      </div>
     </div>
   );
 };
