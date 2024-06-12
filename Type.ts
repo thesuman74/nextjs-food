@@ -47,3 +47,10 @@ export interface User {
   };
   token: string;
 }
+
+export interface Todotypes {
+  checked: boolean;
+  title: string;
+  description: string;
+  id: string;
+}

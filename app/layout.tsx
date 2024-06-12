@@ -4,7 +4,10 @@ import "./globals.css";
 import NavBar from "@/components/ui/NavBar";
 import Footer from "@/components/ui/Footer";
 import BottomNavbar from "@/components/ui/BottomNavbar";
-import StoreProvider from "./StoreProvider";
+import StoreProvider from "../providers/StoreProvider";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import TanstackProvider from "@/providers/TanstackProvider";
+import Provider from "@/components/HOC/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <StoreProvider>
+      <Provider>
         <body className={inter.className}>
           <div className="hidden md:block sticky top-0 z-50">
             <NavBar />
@@ -31,7 +34,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </body>
-      </StoreProvider>
+      </Provider>
     </html>
   );
 }
