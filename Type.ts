@@ -49,8 +49,13 @@ export interface User {
 }
 
 export interface Todotypes {
-  checked: boolean;
-  title: string;
-  description: string;
+  // userId: string;
   id: string;
+  title: string;
+  // Completed: boolean;
+}
+
+export interface Usertypes {
+  id: string;
+  name: string;
 }

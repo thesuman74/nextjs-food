@@ -1,9 +1,18 @@
-import { useQuery } from "@tanstack/react-query";
-import { getTodosIds } from "./api";
+// "use client";
 
-export function useTodosId() {
-  return useQuery({
-    queryKey: ["todos"],
-    queryFn: getTodosIds,
-  });
-}
+// import { useQuery } from "@tanstack/react-query";
+// import { fetchTodos, fetchUsers } from "./api";
+
+// export function TodoQuery() {
+//   return useQuery({
+//     queryKey: ["todos"],
+//     queryFn: fetchTodos,
+//   });
+// }
+
+// export function UsersQuery() {
+//   return useQuery({
+//     queryKey: ["clients"],
+//     queryFn: fetchUsers,
+//   });
+// }
