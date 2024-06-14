@@ -1,6 +1,6 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
+import { useQueries, useQuery } from "@tanstack/react-query";
 import { fetchTodos, fetchUsers } from "./api";
 
 export function TodoQuery() {
@@ -16,3 +16,20 @@ export function UsersQuery() {
     queryFn: fetchUsers,
   });
 }
+
+export function ParallelQuery() {
+  return useQueries({
+    queries: [
+      {
+        queryKey: ["newtodos"],
+        queryFn: fetchTodos,
+      },
+      {
+        queryKey: ["newusers"],
+        queryFn: fetchUsers,
+      },
+    ],
+  });
+}
+
+console.log("parallel query ", ParallelQuery);
