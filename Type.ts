@@ -20,3 +20,42 @@ export interface ResturantProductTypes {
   quantity: number;
   imageLink: string;
 }
+
+export interface User {
+  name: string;
+  image: string;
+  id: string;
+  email: string;
+  username: string;
+  qr_code: string;
+  user_profile: {
+    phone_prefix: string;
+    date_of_birth: string;
+    secondary_phone_number: string;
+    secondary_email: string;
+    country_code: string;
+    country: string | null;
+    address: string | null;
+    city: string | null;
+    street: string | null;
+    zip_code: string | null;
+    house_no: string | null;
+    gender: string;
+    display_picture: string;
+    expertise: string;
+    interest: string;
+  };
+  token: string;
+}
+
+export interface Todotypes {
+  // userId: string;
+  id: string;
+  title: string;
+  // Completed: boolean;
+}
+
+export interface Usertypes {
+  id: string;
+  name: string;
+}

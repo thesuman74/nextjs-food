@@ -1,7 +1,4 @@
 import FilterContents from "@/components/filter/FilterContents";
-import FilterSection from "@/components/filter/FilterSectionCard";
-import FilterSeek from "@/components/filter/FilterSeek";
-import NavBar from "@/components/ui/NavBar";
 import SearchBar from "@/components/ui/SearchBar";
 
 export default function FilterLayout({

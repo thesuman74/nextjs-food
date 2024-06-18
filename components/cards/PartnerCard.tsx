@@ -37,7 +37,7 @@ const PartnerCard = () => {
         />
         <div className="absolute inset-0 flex items-end bg-gradient-to-tr from-black to-transparent">
           <div className="m-5  p-4">
-            <p className="text-sm text-orange-400">Signup as a Business</p>
+            <p className="text-sm text-orange-400">Signup as a User</p>
             <p className="mb-2 text-3xl font-bold text-white">
               Partner With US
             </p>

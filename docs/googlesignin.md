@@ -4,6 +4,15 @@
 
 For the most simplest process which will redirect you to google sign in page follow this link : https://authjs.dev/getting-started/authentication/oauth
 
+## summary
+
+| File                                  | Purpose                                                                                      | Examples                                                                                         |
+| ------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `auth.ts`                             | Configures authentication providers and NextAuth options.                                    | Configures providers like Google and GitHub. Example: `GoogleProvider`, `GitHubProvider`.        |
+| `app\api\auth\[...nextauth]\route.ts` | Sets up the NextAuth API route.                                                              | Import and use NextAuth options from `auth.ts`. Example: `import { authOptions } from "@/auth";` |
+| `app\actions\authAction.ts`           | Contains server-side actions for handling authentication.                                    | Example actions: `signIn`, `signOut`.                                                            |
+| `profile.tsx`                         | React component that displays user profile information and handles sign-in/sign-out actions. | Uses `useSession` hook, and `signIn`, `signOut` functions from NextAuth.                         |
+
 ## Creating a google sigin along with passing data through session , with sign in and sign out functionality
 
 ### 1. Install the Auth.js

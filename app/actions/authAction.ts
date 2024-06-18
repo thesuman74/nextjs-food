@@ -16,3 +16,24 @@ export async function doSocialLogin(formData: FormData) {
 export async function doLogout() {
   await signOut({ redirectTo: "/login" });
 }
+
+export async function doCredentialLogin(formData: FormData) {
+  const email = formData.get("username");
+  const password = formData.get("password");
+
+  console.log("this is Docredentiallogin ", email, password);
+
+  try {
+    const response = await signIn("credentials", {
+      email: formData.get("username"),
+      password: formData.get("password"),
+      redirect: false,
+    });
+    if (response) {
+      console.log("this is Docredentiallogin response ", email, password);
+    }
+    return response;
+  } catch (err) {
+    throw err;
+  }
+}

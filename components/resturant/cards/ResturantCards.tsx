@@ -5,31 +5,15 @@ import { Plus } from "lucide-react";
 import { ResturantProductTypes } from "@/Type";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { addProducts } from "@/lib/store/features/cart/ProductSlice"; // Correct import
+import { fetchResturantProducts } from "@/app/api/products/api";
 
-const ResturantCards = () => {
+const ResturantCards = async () => {
   const dispatch = useAppDispatch();
   const items = useAppSelector((state) =>
     state.products.items.map((item) => item.id)
   ); // Accessing products state
 
-  const [data, setData] = useState<ResturantProductTypes[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(`http://localhost:8000/resturantProducts`, {
-          next: { revalidate: 10 },
-        });
-        const fetchedData = await res.json();
-        setData(fetchedData);
-        // console.log("Fetched from restaurantProducts:", fetchedData);
-      } catch (error) {
-        console.error("Error fetching restaurantProducts:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const fetchedData = await fetchResturantProducts();
 
   const handleClick = (item: ResturantProductTypes) => {
     console.log("Adding product:", item);
@@ -38,7 +22,7 @@ const ResturantCards = () => {
 
   return (
     <div className="flex flex-wrap">
-      {data.map((item) => (
+      {fetchedData.map((item: ResturantProductTypes) => (
         <div
           key={item.id}
           className="relative m-4 flex w-96 h-36 items-center justify-between rounded-xl bg-white shadow-md hover:bg-red-200"

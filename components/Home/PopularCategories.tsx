@@ -1,7 +1,6 @@
 import PopularCategoriesCard from "@/components/cards/PopularCategoriesCard";
 import React, { Suspense } from "react";
-import AddtoCart from "../addtocart/AddtoCart";
-import AddtoCartButton from "../ui/AddtoCartButton";
+import { CardSkeleton } from "../ui/Skeletions";
 
 const PopularCategories = () => {
   return (
@@ -16,7 +15,9 @@ const PopularCategories = () => {
         {/* <AddtoCartButton /> */}
       </div>
 
-      <PopularCategoriesCard />
+      <Suspense fallback={<CardSkeleton />}>
+        <PopularCategoriesCard />
+      </Suspense>
     </div>
   );
 };
