@@ -1,5 +1,6 @@
 import PopularResturantsCard from "@/components/cards/PopularResturantsCard";
-import React from "react";
+import React, { Suspense } from "react";
+import { CardSkeleton } from "../ui/Skeletions";
 
 const PopularResturants = () => {
   return (
@@ -8,7 +9,9 @@ const PopularResturants = () => {
         Popular Resuturants
       </h1>
 
-      <PopularResturantsCard />
+      <Suspense fallback={<CardSkeleton />}>
+        <PopularResturantsCard />
+      </Suspense>
     </div>
   );
 };

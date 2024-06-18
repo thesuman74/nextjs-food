@@ -1,23 +1,12 @@
 "use client";
 
+import { fetchPopularResturants } from "@/app/api/products/api";
 import { DealsTypes } from "@/Type";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const PopularCategoriesCard = () => {
-  const [data, setData] = useState<DealsTypes[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(`http://localhost:8000/deals`, {
-        next: { revalidate: 10 },
-      });
-      const result = await res.json();
-      setData(result);
-    };
-
-    fetchData();
-  }, []);
+const PopularCategoriesCard = async () => {
+  const data = await fetchPopularResturants();
 
   return (
     <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 container max-w-7xl mx-auto p-4">

@@ -28,7 +28,7 @@ export default function RootLayout({
           <div className="hidden md:block sticky top-0 z-50">
             <NavBar />
           </div>
-          <div className="block md:hidden">
+          <div className="block lg:hidden">
             <BottomNavbar />
           </div>
           {children}

@@ -39,7 +39,7 @@ const Page = async () => {
         <p className="text-bold text-2xl text-center">
           This data is present in session
         </p>
-        <p className="max-w-sm w-80 overflow-x-hidden">{userdetail}</p>
+        <p className="max-w-sm w-80 overflow-x-auto">{userdetail}</p>
       </div>
     </div>
   );

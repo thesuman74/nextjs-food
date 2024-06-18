@@ -1,35 +1,20 @@
 "use client";
 
+import { fetchPopularCategories } from "@/app/api/products/api";
 import { add, remove } from "@/lib/store/features/cart/CartSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { DealsTypes } from "@/Type";
 import { Heart } from "lucide-react";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-const PopularCategoriesCard = () => {
+const PopularCategoriesCard = async () => {
   const dispatch = useAppDispatch();
   const items = useAppSelector((state) =>
     state.cart.items.map((item) => item.id)
   );
-  const [data, setData] = useState<DealsTypes[]>([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(`http://localhost:8000/deals`, {
-          next: { revalidate: 10 },
-        });
-        const data = await res.json();
-        setData(data);
-        console.log("Fetched from restaurant:", data);
-      } catch (error) {
-        console.error("Error fetching deals:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const data = await fetchPopularCategories();
 
   const handleToggleCart = (item: DealsTypes) => {
     const itemInCart = items.includes(item.id);
