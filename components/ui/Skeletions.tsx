@@ -20,6 +20,28 @@ export function CardSkeleton() {
   );
 }
 
+export function ResturantProductSkeletion() {
+  const skeletonItems = Array(5).fill(null);
+
+  return (
+    <div className="flex flex-wrap">
+      {skeletonItems.map((_, index) => (
+        <div
+          key={index}
+          className="m-4 flex w-96 h-36 animate-pulse rounded-xl bg-gray-200 p-2"
+        >
+          <div className="mx-5 space-y-3">
+            <div className="h-6 w-48 bg-gray-100 rounded-md"></div>
+            <div className="h-4 w-32 bg-gray-100 rounded-md"></div>
+            <div className="h-4 w-full bg-gray-100 rounded-md"></div>
+          </div>
+          <div className="h-32 w-32 ml-auto bg-gray-100 rounded-xl "></div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function WishlistSkeletion() {
   return (
     <>
