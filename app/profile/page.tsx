@@ -6,7 +6,7 @@ import Logout from "@/components/Logout";
 
 const Page = async () => {
   const session = await auth();
-  console.log("This is session data ", session);
+  // console.log("This is session data ", session);
 
   if (!session?.user) {
     redirect("/login");

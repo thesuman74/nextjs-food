@@ -63,10 +63,10 @@ export const {
       return token;
     },
     session: async ({ session, token }) => {
-      console.log("session", session);
+      // console.log("session", session);
       if (token?.user) {
         session.user = { ...token.user } as any; // Sync user data into session
-        console.log("session", session.user);
+        // console.log("session", session.user);
       }
       return session;
     },
