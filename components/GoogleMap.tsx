@@ -1,4 +1,4 @@
-"use cl";
+"use client";
 
 import React, { useState } from "react";
 import { FetchLocation } from "@/app/api/location/locationapi";
