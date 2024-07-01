@@ -21,6 +21,7 @@ export function LocationDialog() {
     async function fetchIPLocation() {
       let address = localStorage.getItem("location");
       if (address) {
+        console.log("Address is ", address);
         setSelectedAddress(address);
       } else {
         try {
@@ -40,6 +41,18 @@ export function LocationDialog() {
 
   const closeDialog = () => setIsOpen(false);
 
+  const CurrentAddress = async () => {
+    try {
+      const address = await FetchLocationByIP();
+      localStorage.setItem("location", address); // Save to localStorage
+      setSelectedAddress(address);
+      setIsOpen(false);
+    } catch (error) {
+      console.error("Error fetching IP location:", error);
+      setSelectedAddress("Unable to fetch location"); // Handle error state appropriately
+      setIsOpen(false);
+    }
+  };
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
@@ -108,15 +121,21 @@ export function LocationDialog() {
               <MapComponent /> {/* Include the MapComponent here */}
             </div>
 
-            {/* <div className="mt-4">
-              <img src="/Images/map.png" alt="Map" className="w-full rounded" />
-            </div> */}
-            <button
-              className="mt-4 rounded bg-pink-500 px-4 py-2 text-white hover:bg-pink-600"
-              onClick={closeDialog}
-            >
-              DELIVER HIT
-            </button>
+            <div className="flex justify-between">
+              <button
+                className="mt-4 rounded bg-pink-500 px-4 py-2 text-white hover:bg-pink-600"
+                onClick={closeDialog}
+              >
+                DELIVER HIT
+              </button>
+
+              <button
+                className="mt-4 rounded bg-pink-500 px-4 py-2 text-white hover:bg-pink-600"
+                onClick={CurrentAddress}
+              >
+                Current Address
+              </button>
+            </div>
           </div>
         </div>
       </DialogContent>

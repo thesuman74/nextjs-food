@@ -14,7 +14,7 @@ const MapComponent: React.FC = () => {
     const lat = localStorage.getItem("latitude");
     const lon = localStorage.getItem("longitude");
 
-    console.log("longitude and latitude are ", lat, lon);
+    console.log("latitude and latitude are ", lat, lon);
 
     // Fallback location if lat/lon are not in localStorage
     const initialLat = lat ? parseFloat(lat) : 51.505;
